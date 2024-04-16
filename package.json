@@ -1,0 +1,50 @@
+{
+    "name": "@daikin-dsv/tailwind",
+    "version": "1.0.0-alpha.2",
+    "description": "Tailwind plugin using DDS styling",
+    "main": "index.js",
+    "files": [
+        "index.js"
+    ],
+    "scripts": {
+        "lint": "eslint .",
+        "prepare": "husky install"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/daikin-dsv/tailwind.git"
+    },
+    "keywords": [
+        "tailwind",
+        "plugin",
+        "Daikin",
+        "DDS"
+    ],
+    "author": "",
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
+    "bugs": {
+        "url": "https://github.com/daikin-dsv/tailwind/issues"
+    },
+    "homepage": "https://github.com/daikin-dsv/tailwind#readme",
+    "devDependencies": {
+        "@eslint/js": "^9.0.0",
+        "eslint": "^9.0.0",
+        "eslint-config-prettier": "^9.1.0",
+        "globals": "^15.0.0",
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.2",
+        "prettier": "^3.2.5",
+        "tailwindcss": "^3.4.3"
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --cache --cache-location node_modules/.cache/.eslintcache",
+            "npm run test:serial -- --bail --findRelatedTests --passWithNoTests",
+            "npm run test:gql-schema"
+        ],
+        "*.{js,css,md,json,yml,html}": "prettier --write"
+    }
+}
