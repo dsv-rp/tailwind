@@ -7,13 +7,13 @@ Tailwind plugin utilizing Daikin-specific styles
 Install the plugin from npm:
 
 ```javascript
-npm install -D @daikin-dsv/tailwind
+npm install -D @daikin-oss/tailwind
 ```
 
 Then add to your tailwind configuration file:
 
 ```javascript
-const daikinPlugin = require('@daikin-dsv/tailwind');
+const daikinPlugin = require('@daikin-oss/tailwind');
 
 module.exports = {
     content: ['./src/**/*.js'],
@@ -74,3 +74,47 @@ A `daikinSerif` fontFamily option has been added.
 ```
 
 Note that the current default font is `Roboto`, so you would have to import that on your own.
+
+### Tailwind Configuration Callback
+
+If you want to build custom components, for example, based on the added daikin classes, you can include a callback:
+
+```javascript
+const daikinPlugin = require('@daikin-oss/tailwind');
+
+const components = {
+    '.btn': {
+        [`@apply ${ctl(`
+            inline-block
+            font-daikinSerif
+            rounded-lg
+            text-base
+            px-4
+            py-2
+            shadow-lg
+            tracking-wide
+            disabled:cursor-default
+            disabled:shadow-none
+
+            md:py-3
+            md:px-6
+        `)}`]: {}
+    },
+    ...etc
+};
+
+const customComponents = function ({ addComponents }) {
+    addComponents(components, { variants: ['dark', 'active'] });
+};
+
+module.exports = {
+    content: ['./src/**/*.js'],
+    theme: {},
+    variants: {
+        extend: {}
+    },
+    plugins: [daikinPlugin({ callback: customComponents }), ...otherPlugins]
+};
+```
+
+The `customComponents` function above equates to the first argument for the tailwind `plugin` method referenced in the [docs](https://tailwindcss.com/docs/plugins)

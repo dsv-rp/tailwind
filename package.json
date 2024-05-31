@@ -1,6 +1,6 @@
 {
-    "name": "@daikin-dsv/tailwind",
-    "version": "1.0.0-alpha.2",
+    "name": "@daikin-oss/tailwind",
+    "version": "0.0.1",
     "description": "Tailwind plugin using DDS styling",
     "main": "index.js",
     "files": [
@@ -12,7 +12,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/daikin-dsv/tailwind.git"
+        "url": "git+https://github.com/dsv-rp/tailwind.git"
     },
     "keywords": [
         "tailwind",
@@ -26,9 +26,9 @@
         "access": "public"
     },
     "bugs": {
-        "url": "https://github.com/daikin-dsv/tailwind/issues"
+        "url": "https://github.com/dsv-rp/tailwind/issues"
     },
-    "homepage": "https://github.com/daikin-dsv/tailwind#readme",
+    "homepage": "https://github.com/dsv-rp/tailwind#readme",
     "devDependencies": {
         "@eslint/js": "^9.0.0",
         "eslint": "^9.0.0",
