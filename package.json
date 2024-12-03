@@ -16,6 +16,9 @@
     "LICENSE",
     "README.md"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "",
   "license": "MIT",
   "keywords": [
@@ -28,13 +31,10 @@
     "type": "git",
     "url": "git+https://github.com/dsv-rp/tailwind.git"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "bugs": {
     "url": "https://github.com/dsv-rp/tailwind/issues"
   },
-  "homepage": "https://github.com/dsv-rp/tailwind#readme",
+  "homepage": "https://github.com/dsv-rp/tailwind",
   "scripts": {
     "prepare": "husky install",
     "lint": "eslint && prettier -c .",
