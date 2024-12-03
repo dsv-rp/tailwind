@@ -49,3 +49,12 @@ A `daikinSerif` fontFamily option has been added.
 ```
 
 Note that the current default font is `Roboto`, so you would have to import that on your own.
+
+## Build
+
+```sh
+npm run lint
+npm run typecheck
+npm run build
+npm run test:attw
+```
