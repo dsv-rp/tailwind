@@ -37,7 +37,7 @@
   "homepage": "https://github.com/dsv-rp/tailwind#readme",
   "scripts": {
     "prepare": "husky install",
-    "lint": "eslint && prettier -c",
+    "lint": "eslint && prettier -c .",
     "typecheck": "tsc",
     "build": "tsup",
     "test:attw": "attw --pack ."

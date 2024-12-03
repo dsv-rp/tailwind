@@ -32,7 +32,9 @@ module.exports = {
 You can use extended colors anywhere you usually would.
 
 ```html
-<button class="bg-ddt-color-common-brand-default hover:bg-ddt-color-common-brand-hover">
+<button
+  class="bg-ddt-color-common-brand-default hover:bg-ddt-color-common-brand-hover"
+>
   My Button
 </button>
 ```
