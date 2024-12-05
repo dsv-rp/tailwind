@@ -29,7 +29,7 @@ module.exports = {
 Import CSS variables:
 
 ```js
-import "@daikin-oss/dds-tokens/css/daikin/Dark/variables.css";
+import "@daikin-oss/dds-tokens/css/daikin/Light/variables.css";
 ```
 
 See [dds-tokens repository](https://github.com/dsv-rp/dds-tokens?tab=readme-ov-file#readme) for more information.
