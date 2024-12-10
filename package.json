@@ -1,50 +1,76 @@
 {
-    "name": "@daikin-oss/tailwind",
-    "version": "0.0.1",
-    "description": "Tailwind plugin using DDS styling",
-    "main": "index.js",
-    "files": [
-        "index.js"
-    ],
-    "scripts": {
-        "lint": "eslint .",
-        "prepare": "husky install"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dsv-rp/tailwind.git"
-    },
-    "keywords": [
-        "tailwind",
-        "plugin",
-        "Daikin",
-        "DDS"
-    ],
-    "author": "",
-    "license": "MIT",
-    "publishConfig": {
-        "access": "public"
-    },
-    "bugs": {
-        "url": "https://github.com/dsv-rp/tailwind/issues"
-    },
-    "homepage": "https://github.com/dsv-rp/tailwind#readme",
-    "devDependencies": {
-        "@eslint/js": "^9.0.0",
-        "eslint": "^9.0.0",
-        "eslint-config-prettier": "^9.1.0",
-        "globals": "^15.0.0",
-        "husky": "^9.0.11",
-        "lint-staged": "^15.2.2",
-        "prettier": "^3.2.5",
-        "tailwindcss": "^3.4.3"
-    },
-    "lint-staged": {
-        "*.js": [
-            "eslint --cache --cache-location node_modules/.cache/.eslintcache",
-            "npm run test:serial -- --bail --findRelatedTests --passWithNoTests",
-            "npm run test:gql-schema"
-        ],
-        "*.{js,css,md,json,yml,html}": "prettier --write"
+  "name": "@daikin-oss/tailwind",
+  "version": "0.0.1",
+  "description": "Tailwind plugin using DDS design tokens",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
     }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "tailwind",
+    "plugin",
+    "Daikin",
+    "DDS"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsv-rp/tailwind.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dsv-rp/tailwind/issues"
+  },
+  "homepage": "https://github.com/dsv-rp/tailwind",
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint && prettier -c .",
+    "typecheck": "tsc",
+    "build": "tsup",
+    "test:attw": "attw --pack ."
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.0",
+    "@daikin-oss/dds-tokens": "^0.2.1",
+    "@eslint/js": "^9.16.0",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/node": "^20.17.9",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.13.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.4.1",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.4.2",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "tailwindcss": "^3.4.16",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.17.0"
+  },
+  "peerDependencies": {
+    "@daikin-oss/dds-tokens": ">=0.2.1 <1.0.0",
+    "tailwindcss": "^3.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --cache --cache-location node_modules/.cache/.eslintcache",
+      "npm run test:serial -- --bail --findRelatedTests --passWithNoTests",
+      "npm run test:gql-schema"
+    ],
+    "*.{js,css,md,json,yml,html}": "prettier --write"
+  }
 }
