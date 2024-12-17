@@ -46,6 +46,7 @@
     "@arethetypeswrong/cli": "^0.17.0",
     "@daikin-oss/dds-tokens": "^0.2.1",
     "@eslint/js": "^9.16.0",
+    "@tokens-studio/types": "^0.5.1",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/node": "^20.17.9",
     "eslint": "^9.16.0",
