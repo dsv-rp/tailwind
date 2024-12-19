@@ -19,7 +19,9 @@ function createPerTypeTokenMap(
       tsType as TSTokenType | null
     );
     const object = (acc[unifiedType] ??= {});
-    object[`${keyPrefix}${key}`] = `var(${cssVarPrefix}${key}) /* ${value} */`;
+    const varRef = `var(${cssVarPrefix}${key})`;
+    const comment = value ? ` /* ${value} */` : "";
+    object[`${keyPrefix}${key}`] = `${varRef}${comment}`;
     return acc;
   }, {}) as Partial<Record<UnifiedTokenType, Record<string, string>>>;
 }
