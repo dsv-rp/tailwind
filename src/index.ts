@@ -26,19 +26,18 @@ function createPerTypeTokenMap(
   }, {}) as Partial<Record<UnifiedTokenType, Record<string, string>>>;
 }
 
-const DEFAULT_OPTIONS = {
-  prefix: "ddt",
-  cssVarPrefix: "dds",
-} as const;
+export type Options = {
+  prefix?: string | undefined;
+  cssVarPrefix?: string | undefined;
+};
 
-const tokensPlugin = plugin.withOptions<
-  | {
-      prefix?: string | undefined;
-      cssVarPrefix?: string | undefined;
-    }
-  | undefined
->(
-  (options) =>
+const DEFAULT_OPTIONS = {
+  prefix: "ddt-",
+  cssVarPrefix: "--dds-",
+} as const satisfies Options;
+
+const tokensPlugin = plugin.withOptions<Options | undefined>(
+  (options?: Options) =>
     // eslint-disable-next-line @typescript-eslint/unbound-method
     ({ addUtilities }) => {
       const { prefix, cssVarPrefix } = { ...DEFAULT_OPTIONS, ...options };
@@ -89,7 +88,7 @@ const tokensPlugin = plugin.withOptions<
         )
       );
     },
-  (options) => {
+  (options?: Options) => {
     const { prefix, cssVarPrefix } = { ...DEFAULT_OPTIONS, ...options };
     const perTypeTokenMap = createPerTypeTokenMap(prefix, cssVarPrefix);
 
