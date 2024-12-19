@@ -22,7 +22,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [daikinPlugin(), ...otherPlugins],
+  plugins: [daikinPlugin({}), ...otherPlugins],
 };
 ```
 
