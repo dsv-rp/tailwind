@@ -1,6 +1,6 @@
 {
   "name": "@daikin-oss/tailwind",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Tailwind plugin using DDS design tokens",
   "type": "module",
   "main": "dist/index.js",
