@@ -1,5 +1,11 @@
 # @daikin-oss/tailwind
 
+## 0.2.0
+
+### Minor Changes
+
+- [#7](https://github.com/dsv-rp/tailwind/pull/7) [`2c4a580`](https://github.com/dsv-rp/tailwind/commit/2c4a5807cabb8c15b5fa3f729b2932f45a9f8890) Thanks [@yodas7](https://github.com/yodas7)! - Correct default plugin options.
+
 ## 0.1.0
 
 ### Minor Changes
