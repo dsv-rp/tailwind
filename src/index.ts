@@ -32,7 +32,7 @@ export type Options = {
 };
 
 const DEFAULT_OPTIONS = {
-  prefix: "ddt-",
+  prefix: "dds-",
   cssVarPrefix: "--dds-",
 } as const satisfies Options;
 
@@ -43,7 +43,7 @@ const tokensPlugin = plugin.withOptions<Options | undefined>(
       const { prefix, cssVarPrefix } = { ...DEFAULT_OPTIONS, ...options };
       const perTypeTokenMap = createPerTypeTokenMap(prefix, cssVarPrefix);
 
-      // Add `b-ddt-*` and `o-ddt-*`.
+      // Add `b-dds-*` and `o-dds-*`.
       addUtilities(
         Object.entries(perTypeTokenMap.border ?? {}).map(
           ([key, value]): Record<string, Record<string, string>> => ({
@@ -77,7 +77,7 @@ const tokensPlugin = plugin.withOptions<Options | undefined>(
         )
       );
 
-      // Add `type-ddt-*`.
+      // Add `type-dds-*`.
       addUtilities(
         Object.entries(perTypeTokenMap.typography ?? {}).map(
           ([key, value]): Record<string, Record<string, string>> => ({
