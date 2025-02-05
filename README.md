@@ -4,14 +4,22 @@ Tailwind plugin utilizing Daikin-specific styles
 
 ## Installation
 
-Install the plugin and tokens from npm:
+### 1. Install the plugin and tokens from npm:
 
 ```sh
-npm install -D @daikin-oss/tailwind
 npm install @daikin-oss/dds-tokens
+npm install -D @daikin-oss/tailwind
 ```
 
-Use the plugin in your tailwind config:
+### 2. Use the plugin in your tailwind config:
+
+Tailwind CSS v4:
+
+```css
+@plugin "@daikin-oss/tailwind";
+```
+
+Tailwind CSS v3:
 
 ```js
 const daikinPlugin = require("@daikin-oss/tailwind");
@@ -26,7 +34,7 @@ module.exports = {
 };
 ```
 
-Import CSS variables:
+### 3. Import CSS variables:
 
 ```js
 import "@daikin-oss/dds-tokens/css/daikin/Light/variables.css";
