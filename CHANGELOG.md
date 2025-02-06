@@ -1,5 +1,11 @@
 # @daikin-oss/tailwind
 
+## 0.3.0
+
+### Minor Changes
+
+- [#9](https://github.com/dsv-rp/tailwind/pull/9) [`ddc3646`](https://github.com/dsv-rp/tailwind/commit/ddc36462fbb12f3db0f436a52d4051a19182b5b2) Thanks [@yodas7](https://github.com/yodas7)! - Changed default theme prefix to `dds-` from `ddt-`.
+
 ## 0.2.0
 
 ### Minor Changes
