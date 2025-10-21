@@ -26,6 +26,13 @@ module.exports = {
 };
 ```
 
+When using Tailwind's CSS entrypoint in tailwind v4, you can import the plugin directly in your stylesheet:
+
+```css
+@import 'tailwindcss';
+@plugin '@daikin-oss/tailwind';
+```
+
 Import CSS variables:
 
 ```js
