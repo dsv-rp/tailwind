@@ -11,6 +11,12 @@ npm install @daikin-oss/dds-tokens
 npm install -D @daikin-oss/tailwind
 ```
 
+## Usage
+
+Depending on your Tailwind version, you can set up the plugin in one of two ways:
+
+### Tailwind v3 and earlier
+
 Use the plugin in your tailwind config:
 
 ```js
@@ -26,14 +32,21 @@ module.exports = {
 };
 ```
 
-When using Tailwind's CSS entrypoint in tailwind v4, you can import the plugin directly in your stylesheet:
+### Tailwind v4
+
+Tailwind v4 no longer uses a JavaScript configuration file by default.
+Instead, you can enable plugins directly from your CSS entrypoint:
 
 ```css
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin '@daikin-oss/tailwind';
 ```
 
-Import CSS variables:
+---
+
+### Import CSS Variables (required for both v3 and v4)
+
+To use Daikin design tokens in your project, import the CSS variables:
 
 ```js
 import "@daikin-oss/dds-tokens/css/daikin/Light/variables.css";
