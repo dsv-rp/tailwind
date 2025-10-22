@@ -1,5 +1,11 @@
 # @daikin-oss/tailwind
 
+## 0.4.0
+
+### Minor Changes
+
+- [#12](https://github.com/dsv-rp/tailwind/pull/12) [`15f88f4`](https://github.com/dsv-rp/tailwind/commit/15f88f4085e9491277f001394838f319dcc5cc63) Thanks [@hiro-daikin](https://github.com/hiro-daikin)! - Support Tailwind CSS v4 via peer dependency range and document CSS entrypoint usage.
+
 ## 0.3.0
 
 ### Minor Changes
