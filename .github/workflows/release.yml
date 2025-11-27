@@ -75,7 +75,6 @@ jobs:
         env:
           HUSKY: 0
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
           NEW_VERSION: ${{ steps.changesets_status.outputs.new_version }}
 
