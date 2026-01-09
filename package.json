@@ -42,7 +42,11 @@
     "build": "tsup",
     "changeset-version": "changeset version && npm install --package-lock-only",
     "changeset-publish": "changeset publish",
-    "test:attw": "attw --pack ."
+    "test:attw": "attw --pack .",
+    "license-check": "license-checker --summary --onlyAllow \"$npm_package_config_licenseAllowlist\""
+  },
+  "config": {
+    "licenseAllowlist": "Apache-2.0;BlueOak-1.0.0;BSD-2-Clause;BSD-3-Clause;CC-BY-3.0;CC0-1.0;ISC;MIT;Python-2.0"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.1",
@@ -58,6 +62,7 @@
     "globals": "^15.14.0",
     "husky": "^9.1.7",
     "jiti": "^2.4.2",
+    "license-checker": "^25.0.1",
     "lint-staged": "^15.2.11",
     "prettier": "^3.4.2",
     "prettier-plugin-organize-imports": "^4.1.0",
