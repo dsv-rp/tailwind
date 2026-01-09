@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   license-check:
-    runs-on: ubuntu-latestExpand commentComment on line R12ResolvedCode has comments. Press enter to view.
+    runs-on: ubuntu-latest
 
     timeout-minutes: 15
 
