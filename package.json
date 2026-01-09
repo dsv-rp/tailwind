@@ -46,7 +46,7 @@
     "license-check": "license-checker --summary --onlyAllow \"$npm_package_config_licenseAllowlist\""
   },
   "config": {
-    "licenseAllowlist": "Apache-2.0;BlueOak-1.0.0;BSD-2-Clause;BSD-3-Clause;CC-BY-3.0;CC0-1.0;ISC;MIT;MIT;Python-2.0"
+    "licenseAllowlist": "Apache-2.0;BlueOak-1.0.0;BSD-2-Clause;BSD-3-Clause;CC-BY-3.0;CC0-1.0;ISC;MIT;Python-2.0"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.1",
