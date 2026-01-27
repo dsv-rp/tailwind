@@ -1,5 +1,11 @@
 # @daikin-oss/tailwind
 
+## 1.0.0
+
+### Major Changes
+
+- [#16](https://github.com/dsv-rp/tailwind/pull/16) [`7c676d0`](https://github.com/dsv-rp/tailwind/commit/7c676d06ffaab14ec6f479eee711b53b88f0baa9) Thanks [@yodas7](https://github.com/yodas7)! - Release v1.0.0
+
 ## 0.4.0
 
 ### Minor Changes
