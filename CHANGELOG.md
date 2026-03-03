@@ -1,5 +1,11 @@
 # @daikin-oss/tailwind
 
+## 1.1.0
+
+### Minor Changes
+
+- [#19](https://github.com/dsv-rp/tailwind/pull/19) [`374f230`](https://github.com/dsv-rp/tailwind/commit/374f230b7a9207230990dd8cdfc99c8fe6dc43a7) Thanks [@yodas7](https://github.com/yodas7)! - Update peer dependency constraint for `@daikin-oss/dds-tokens` to support version 1.x and above. The upper bound restriction has been removed to allow compatibility with the latest major version of dds-tokens.
+
 ## 1.0.0
 
 ### Major Changes
