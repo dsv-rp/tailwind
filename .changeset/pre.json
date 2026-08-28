@@ -4,5 +4,7 @@
   "initialVersions": {
     "@daikin-oss/tailwind": "1.1.0"
   },
-  "changesets": []
+  "changesets": [
+    "density-tokens"
+  ]
 }
