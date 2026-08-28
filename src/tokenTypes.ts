@@ -5,6 +5,7 @@ export type { TSTokenType };
 /** Token type of style-dictionary */
 export type SDTokenType =
   | "border"
+  | "boolean"
   | "color"
   | "dimension"
   | "fontFamily"
