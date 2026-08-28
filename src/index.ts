@@ -1,4 +1,5 @@
 import designTokens from "@daikin-oss/dds-tokens/json/daikin/Light/tokens.json" with { type: "json" };
+import densityTokens from "@daikin-oss/dds-tokens/json/density/Default/tokens.json" with { type: "json" };
 import plugin from "tailwindcss/plugin";
 import {
   unifyTokenType,
@@ -11,7 +12,7 @@ function createPerTypeTokenMap(
   keyPrefix: string,
   cssVarPrefix: string
 ): Partial<Record<UnifiedTokenType, Record<string, string>>> {
-  return Object.entries(designTokens).reduce<
+  return Object.entries({ ...designTokens, ...densityTokens }).reduce<
     Partial<Record<UnifiedTokenType, Partial<Record<string, string>>>>
   >((acc, [key, [value, sdType, tsType]]) => {
     const unifiedType = unifyTokenType(
