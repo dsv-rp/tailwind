@@ -16,11 +16,7 @@ export type SDTokenType =
   | "typography";
 
 export type UnifiedTokenType =
-  | SDTokenType
-  | "borderRadius"
-  | "borderWidth"
-  | "spacing"
-  | "sizing";
+  SDTokenType | "borderRadius" | "borderWidth" | "spacing" | "sizing";
 
 export function unifyTokenType(
   sdType: SDTokenType,
